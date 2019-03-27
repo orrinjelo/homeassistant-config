@@ -1,0 +1,50 @@
+- platform: darksky
+  api_key: !secret darksky_secret
+  forecast: 
+    - 0
+  monitored_conditions:
+    - summary
+    - icon
+    - temperature
+    - temperature_high
+    - temperature_low
+
+- platform: rest
+  resource: http://192.168.0.3/api/yOu4WrMOJ3DYz1g9wOsgUp-CDQhrrfNgJ9PueHYJ/sensors/5
+  value_template: '{{ value_json.state.lightlevel }}'
+  unit_of_measurement: Lux
+  name: 'Stairway Lux'
+
+- platform: rest
+  resource: http://192.168.0.3/api/yOu4WrMOJ3DYz1g9wOsgUp-CDQhrrfNgJ9PueHYJ/sensors/3
+  value_template: '{{ value_json.state.temperature | float / 100  }}'
+  unit_of_measurement: °C
+  name: 'Stairway Temperature'
+
+- platform: rest
+  resource: http://192.168.0.3/api/yOu4WrMOJ3DYz1g9wOsgUp-CDQhrrfNgJ9PueHYJ/sensors/9
+  value_template: '{{ value_json.state.lightlevel }}'
+  unit_of_measurement: Lux
+  name: 'Office Lux'
+
+- platform: rest
+  resource: http://192.168.0.3/api/yOu4WrMOJ3DYz1g9wOsgUp-CDQhrrfNgJ9PueHYJ/sensors/7
+  value_template: '{{ value_json.state.temperature | float / 100  }}'
+  unit_of_measurement: °C
+  name: 'Office Temperature'
+
+- platform: ring
+
+# Weather prediction
+#  - platform: yr
+#    name: Weather
+#    forecast: 24
+#    monitored_conditions:
+#      - temperature
+#      - symbol
+#      - precipitation
+#      - windSpeed
+#      - pressure
+#      - windDirection
+#      - humidity
+#      - cloudiness

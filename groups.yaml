@@ -1,0 +1,17 @@
+entertainment_room:
+  name: Entertainment Room
+  entities:
+    - light.hue_color_lamp_1
+    - light.hue_color_lamp_2
+    - light.hue_color_lamp_3
+    - light.hue_color_lamp_4
+
+darksky_group:
+  name: DarkSky
+  entities:
+    - sensor.darksky_temperature
+    - sensor.darksky_humidity
+    - sensor.darksky_daytime_high_temperature
+    - sensor.darksky_overnight_low_temperature
+    - sensor.darksky_pressure
+    - sensor.darksky_cloud_coverage

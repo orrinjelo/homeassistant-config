@@ -1,0 +1,5 @@
+# Snoopy camera 
+#  - platform: generic
+#    still_image_url: http://192.168.0.5:8000/camera
+#    name: peeper
+- platform: ring

@@ -1,0 +1,13 @@
+secrets.yaml
+.cloud
+.storage
+deps
+downloads
+tts
+.google_maps_location_sharing*
+.HA_VERSION
+.ring_cache.pickle
+.spotify-token-cache
+.uuid
+*.db
+*.log
